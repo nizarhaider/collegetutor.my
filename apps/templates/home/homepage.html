@@ -8,9 +8,35 @@
 {% block content %}
 
     <main>
-        
-        {% include 'includes/preloader.html' %}
 
+        {% include 'includes/preloader.html' %}
+        <nav class="py-2 bg-light border-bottom">
+            <div class="container d-flex flex-wrap">
+              <ul class="nav me-auto">
+                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</h6></li>
+                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Features</h6></li>
+                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Pricing</h6></li>
+                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">FAQs</h6></li>
+                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">About</h6></li>
+              </ul>
+              <ul class="nav">
+                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Login</h6></li>
+                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Sign up</h6></li>
+              </ul>
+            </div>
+        </nav>
+        <header class="py-3 mb-4 border-bottom">
+            <div class="container d-flex flex-wrap justify-content-center">
+
+              <a href="/" class="d-flex align-items-center mb-0 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+                <img src="/static/media/logo/4.svg", width="200" height="200" align="top">
+              </a>
+
+              <form class="col-12 col-lg-auto mb-0  mb-lg-0">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+              </form>
+            </div>
+          </header>
         <!-- Tutors Section -->
 
     <div class="section section-lg bg-primary-app">
@@ -31,7 +57,7 @@
                                 <div class="border-bottom px-4 py-5">
                                 <div class="row align-items-center">
                                     <div class="col-3 pb-3 pb-md-0">
-                                        <img src="/static/assets/img/team/chad1.jpg" class="rounded-circle" alt="{{user.username}}">
+                                        <img src="static{{user.image.url}}" class="rounded-circle" height="210" width="300" alt="{{user.username}}">
                                     </div>
                                     <div class="col-6  pb-md-3">
                                         <h2 class="h3 mb-1 fw-bolder">{{ user.user }}</h2>

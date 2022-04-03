@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8acce85-f817-4259-afe4-6a9aafeec765" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/media/logo/12.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/media/logo/4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/media/logo/4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/media/logo/5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/media/logo/5.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/media/logo/9.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/templates/home/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/home/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/templates/includes/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/includes/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/media/profile_pics/1641830405518.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/media/profile_pics/IMG_20210824_155302_003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/media/profile_pics/chad.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/media/profile_pics/p04chzvm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

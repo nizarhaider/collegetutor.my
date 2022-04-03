@@ -10,33 +10,28 @@
     <main>
 
         {% include 'includes/preloader.html' %}
-        <nav class="py-2 bg-light border-bottom">
-            <div class="container d-flex flex-wrap">
-              <ul class="nav me-auto">
-                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</h6></li>
-                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Features</h6></li>
-                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Pricing</h6></li>
-                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">FAQs</h6></li>
-                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">About</h6></li>
-              </ul>
-              <ul class="nav">
-                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Login</h6></li>
-                <li class="nav-item"><h6 href="#" class="nav-link link-dark px-2">Sign up</h6></li>
-              </ul>
-            </div>
-        </nav>
-        <header class="py-3 mb-4 border-bottom">
-            <div class="container d-flex flex-wrap justify-content-center">
+        <div class="container-fluid">
+            <header class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-between py-0 mb-0 border-bottom">
+                <a href="/" class="d-flex align-items-center col-md-3 mt-3 mb-md-3 text-dark text-decoration-none">
+                  <img src="/static/media/logo/5.svg" >
+                  <!--                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>-->
+                </a>
 
-              <a href="/" class="d-flex align-items-center mb-0 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-                <img src="/static/media/logo/4.svg", width="200" height="200" align="top">
-              </a>
 
-              <form class="col-12 col-lg-auto mb-0  mb-lg-0">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-              </form>
-            </div>
-          </header>
+              <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+              </ul>
+
+              <div class="col-md-3 text-end">
+                <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button>
+              </div>
+            </header>
+        </div>
         <!-- Tutors Section -->
 
     <div class="section section-lg bg-primary-app">

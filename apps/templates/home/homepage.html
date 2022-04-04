@@ -11,10 +11,11 @@
         
         {% include 'includes/preloader.html' %}
 
+    
         <!-- Tutors Section -->
 
     <div class="section section-lg bg-primary-app">
-        <div class="container">
+        <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 text-center mb-5 mb-lg-6">
                 <h2 class="display-2 fw-bold">
@@ -25,7 +26,10 @@
         </div>
 
             <div class="row justify-content-center">
-                    <div class="col-12 col-lg-10">
+                    <div class="col-3 ">
+                        {% include 'includes/sidebar.html' %}
+                    </div>
+                    <div class="col-8 ">
                         <div class="card bg-white border-gray-300">
                             {% for user in user_list %}
                                 <div class="border-bottom px-4 py-5">
@@ -59,6 +63,7 @@
                             {% endfor %}
                         </div>
                     </div>
+ 
             </div>
         </div>
 

@@ -10,7 +10,7 @@ from django.template import loader
 from django.urls import reverse
 from .models import Profile
 
-
+# home page
 def index(request):
     context = {'segment': 'index',
                'user_list': Profile.objects.all()}
@@ -18,7 +18,22 @@ def index(request):
     html_template = loader.get_template('home/homepage.html')
     return HttpResponse(html_template.render(context, request))
 
+# profile page
+def tutor(request):
+    try:
+        load_template = request.path.split('/')[-1]
+        context = {}
 
+
+        html_template = loader.get_template('home/' + load_template +'.html')
+        return HttpResponse(html_template.render(context, request))
+
+    except template.TemplateDoesNotExist:
+
+        html_template = loader.get_template('home/page-404.html')
+        return HttpResponse(html_template.render(context, request))
+
+#others
 def pages(request):
     context = {}
     # All resource paths end in .html.
@@ -26,7 +41,6 @@ def pages(request):
     try:
 
         load_template = request.path.split('/')[-1]
-
         if load_template == 'admin':
             return HttpResponseRedirect(reverse('admin:index'))
         context['segment'] = load_template

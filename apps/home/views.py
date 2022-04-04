@@ -11,7 +11,7 @@ from django.urls import reverse
 from .models import Profile
 
 
-@login_required(login_url="/login/")
+
 def index(request):
     context = {'segment': 'index',
                'user_list': Profile.objects.all()}
@@ -20,7 +20,7 @@ def index(request):
     return HttpResponse(html_template.render(context, request))
 
 
-@login_required(login_url="/login/")
+
 def pages(request):
     context = {}
     # All resource paths end in .html.

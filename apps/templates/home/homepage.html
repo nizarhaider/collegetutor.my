@@ -9,7 +9,7 @@
 
     <main>
 
-        {% include 'includes/preloader.html' %}
+        <!-- {% include 'includes/preloader.html' %} -->
         <div class="container-fluid">
             <header class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-between py-0 mb-0 border-bottom">
                 <a href="/" class="d-flex align-items-center col-md-3 mt-3 mb-md-3 text-dark text-decoration-none">
@@ -35,51 +35,55 @@
         <!-- Tutors Section -->
 
     <div class="section section-lg bg-primary-app">
-        <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 text-center mb-5 mb-lg-6">
-                <h2 class="display-2 fw-bold">
-                    Tutors
-                </h2>
-                <p class="lead">Courses made easy</p>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center mb-5 mb-lg-6">
+                    <h2 class="display-2 fw-bold">
+                        Tutors
+                    </h2>
+                    <p class="lead">Courses made easy</p>
+                </div>
             </div>
-        </div>
 
             <div class="row justify-content-center">
-                    <div class="col-12 col-lg-10">
-                        <div class="card bg-white border-gray-300">
-                            {% for user in user_list %}
-                                <div class="border-bottom px-4 py-5">
-                                <div class="row align-items-center">
-                                    <div class="col-3 pb-3 pb-md-0">
-                                        <img src="static{{user.image.url}}" class="rounded-circle" height="210" width="300" alt="{{user.username}}">
-                                    </div>
-                                    <div class="col-6  pb-md-3">
-                                        <h2 class="h3 mb-1 fw-bolder">{{ user.user }}</h2>
-                                        <p class="p mb-1"> Year {{user.year}}</p>
-                                        <h3 class="h6 mb-3 fw-bolder">{{user.course}}</h3>
-                                        <p class="mb-0">Collaborate with creative and development teams on the execution of ideas.</p>
-                                    </div>
-                                    <div class="col-3 text-center ">
-                                            <p class="fw-bolder"><span class="h5 fw-bolder">RM{{user.rate}} /</span>h</p>
-                                            <p>20 minute trial lesson</p>
-                                            <span class="d-block mt-3">
-                                                <span class="star fas fa-star text-warning"></span>
-                                                <span class="star fas fa-star text-warning"></span>
-                                                <span class="star fas fa-star text-warning"></span>
-                                                <span class="star fas fa-star text-warning"></span>
-                                                <span class="star fas fa-star text-warning"></span>
-                                            </span>
+                <div class="col-3">
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="col-9">
+                    <div class="card bg-white border-gray-300">
+                        {% for user in user_list %}
+                            <div class="border-bottom px-4 py-5">
+                            <div class="row align-items-center">
+                                <div class="col-3 pb-3 pb-md-0">
+                                    <img src="static{{user.image.url}}" class="rounded-circle" height="210" width="300" alt="{{user.username}}">
+                                </div>
+                                <div class="col-6  pb-md-3">
+                                    <h2 class="h3 mb-1 fw-bolder">{{ user.user }}</h2>
+                                    <p class="p mb-1"> Year {{user.year}}</p>
+                                    <h3 class="h6 mb-3 fw-bolder">{{user.course}}</h3>
+                                    <p class="mb-0">Collaborate with creative and development teams on the execution of ideas.</p>
+                                </div>
+                                <div class="col-3 text-center ">
+                                        <p class="fw-bolder"><span class="h5 fw-bolder">RM{{user.rate}} /</span>h</p>
+                                        <p>20 minute trial lesson</p>
+                                        <span class="d-block mt-3">
+                                            <span class="star fas fa-star text-warning"></span>
+                                            <span class="star fas fa-star text-warning"></span>
+                                            <span class="star fas fa-star text-warning"></span>
+                                            <span class="star fas fa-star text-warning"></span>
+                                            <span class="star fas fa-star text-warning"></span>
+                                        </span>
 
-                                            <span class="d-block mt-5">
-                                                <a href="#" class="btn btn-primary btn-sm">Book Now</a>
-                                            </span>
-                                    </div>
+                                        <span class="d-block mt-5">
+                                            <a href="#" class="btn btn-primary btn-sm">Book Now</a>
+                                        </span>
                                 </div>
                             </div>
-                            {% endfor %}
                         </div>
+                        {% endfor %}
                     </div>
+                </div>
+                
             </div>
         </div>
 

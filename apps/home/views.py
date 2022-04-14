@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from .models import Profile
+from .models import Profile, Course
 
 
 def is_valid_queryparam(param):
@@ -18,21 +18,29 @@ def is_valid_queryparam(param):
 
 def filter(request):
     qs = Profile.objects.all()
-    categories = Category.objects.all()
-    title_contains_query = request.GET.get('title_contains')
-    id_exact_query = request.GET.get('id_exact')
-    title_or_author_query = request.GET.get('title_or_author')
-    view_count_min = request.GET.get('view_count_min')
-    view_count_max = request.GET.get('view_count_max')
-    date_min = request.GET.get('date_min')
-    date_max = request.GET.get('date_max')
-    category = request.GET.get('category')
-    reviewed = request.GET.get('reviewed')
-    not_reviewed = request.GET.get('notReviewed')
+    courses = Course.objects.all()
+    # title_contains_query = request.GET.get('title_contains')
+    course = request.GET.get('search_sub')
+    faculty = request.GET.get('faculty')
+    rate_min = request.GET.get('rate_min')
+    rate_max = request.GET.get('rate_max')
+
+    if is_valid_queryparam(course):
+        qs = qs.filter(id=course)
+
+    if is_valid_queryparam(rate_min):
+        qs = qs.filter(views__gte=rate_min)
+
+    if is_valid_queryparam(rate_max):
+        qs = qs.filter(views__lt=rate_min)
+
+    return qs
 
 
 def index(request):
+    qs = filter(request)
     context = {'segment': 'index',
+               'queryset' : qs,
                'user_list': Profile.objects.all()}
 
 

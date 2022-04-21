@@ -116,13 +116,13 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Directory where uploaded media is saved.
-MEDIA_URL = '/media/' # Public URL at the browser
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
 
+MEDIA_ROOT = os.path.join(CORE_DIR, 'apps/static/media') # Directory where uploaded media is saved.
+MEDIA_URL = '/media/' # Public URL at the browser
 
 #############################################################
 #############################################################

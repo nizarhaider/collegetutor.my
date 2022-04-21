@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8acce85-f817-4259-afe4-6a9aafeec765" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/apps/static/assets/img/team/chad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/static/assets/img/team/chad1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/static/assets/img/team/nizar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/templates/home/homepage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/media/profile_pics/1641830405518.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/media/profile_pics/IMG_20210824_155302_003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/media/profile_pics/chad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/media/profile_pics/p04chzvm.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/migrations/0002_auto_20220330_0409.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/migrations/0003_auto_20220331_0444.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/migrations/0004_profile_rate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/migrations/0005_auto_20220415_0239.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/home/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/home/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/includes/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/includes/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/layouts/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/static/assets/img/team" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>

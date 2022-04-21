@@ -1,35 +1,42 @@
+
 <div class="d-sm-flex">
     <div class="me-sm-2">
         <div id="filter" class="p-2 bg-light ms-md-4 ms-sm-2 border">
             <div class="border-bottom h5 text-uppercase">Filter By</div>
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Rate <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#rate" aria-expanded="false" aria-controls="rate"> <span class="fas fa-plus"></span> </button> </div>
-                <div id="rate" class="collapse show">
-                      <label for="min_range" class="form-label">Min</label>
-                        <input type="range" class="form-range" id="min_range" name="min_range">
-                      <label for="max_range" class="form-label">Max</label>
-                        <input type="range" class="form-range" id="max_range" name="max_range">
-                </div>
-            </div>
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Faculty <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#faculty" aria-expanded="false" aria-controls="faculty"> <span class="fas fa-plus"></span> </button> </div>
-                <div id="faculty" class="collapse show">
-                    <select class="form-select" aria-label="Default select example" name="faculty">
-                      <option selected>Select Faculty</option>
-                      <option value="1">Mechanical</option>
-                      <option value="2">Computing</option>
-                      <option value="3">Electrical</option>
-                    </select>
-                </div>
-            </div>
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Subjects <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#subjects" aria-expanded="false" aria-controls="subjects"> <span class="fas fa-plus"></span> </button> </div>
-                <div id="subjects" class="collapse show">
-                      <input type="text" class="form-control" placeholder="Enter subject to search" aria-label="Subjects" aria-describedby="basic-addon1" name="search_sub">
+                <form>
+                    <div class="box border-bottom">
+                        <div class="box-label text-uppercase d-flex align-items-center">Rate <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#rate" aria-expanded="false" aria-controls="rate"> <span class="fas fa-plus"></span> </button> </div>
+                        <div id="rate" class="collapse show">
+                              <label for="min_range" class="form-label">Min</label>
+                                <input type="range" class="form-range" id="min_range" name="min_range">
+                              <label for="max_range" class="form-label">Max</label>
+                                <input type="range" class="form-range" id="max_range" name="max_range">
+                        </div>
+                    </div>
+                    <div class="box border-bottom">
+                        <div class="box-label text-uppercase d-flex align-items-center">Faculty <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#faculty" aria-expanded="false" aria-controls="faculty"> <span class="fas fa-plus"></span> </button> </div>
+                        <div id="faculty" class="collapse show">
+                            <select class="form-select" aria-label="Default select example" name="faculty">
+                              <option selected>Select Faculty</option>
+                                {% for faculty in faculties %}
+                              <option value="{{faculty}}">{{ faculty }}</option>
+                                {% endfor %}
+        <!--                      <option value="2">Computing</option>-->
+        <!--                      <option value="3">Electrical</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box border-bottom">
+                        <div class="box-label text-uppercase d-flex align-items-center">Subjects <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#subjects" aria-expanded="false" aria-controls="subjects"> <span class="fas fa-plus"></span> </button> </div>
+                        <div id="subjects" class="collapse show">
+                              <input type="text" class="form-control" placeholder="Enter subject to search" aria-label="Subjects" aria-describedby="basic-addon1" name="search_sub">
 
+                        </div>
+                    </div>
+                    <div class="box border-bottom">
+                    <button type="submit" class="btn btn-primary mt-2">Filter</button>
                 </div>
-            </div>
-
+                </form>
         </div>
     </div>
 </div>

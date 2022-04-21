@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-9">
                     <div class="card bg-white border-gray-300">
-                        {% for user in user_list %}
+                        {% for user in queryset %}
                             <div class="border-bottom px-4 py-5">
                             <div class="row align-items-center">
                                 <div class="col-3 pb-3 pb-md-0">
@@ -60,7 +60,7 @@
                                 <div class="col-6  pb-md-3">
                                     <h2 class="h3 mb-1 fw-bolder">{{ user.user }}</h2>
                                     <p class="p mb-1"> Year {{user.year}}</p>
-                                    <h3 class="h6 mb-3 fw-bolder">{{user.course}}</h3>
+                                    <h3 class="h6 mb-3 fw-bolder">{{user.faculty}}</h3>
                                     <p class="mb-0">Collaborate with creative and development teams on the execution of ideas.</p>
                                 </div>
                                 <div class="col-3 text-center ">

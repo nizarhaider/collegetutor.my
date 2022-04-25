@@ -10,7 +10,7 @@
     <main>
 
         <!-- {% include 'includes/preloader.html' %} -->
-        <div class="container-fluid">
+    <div class="container-fluid">
             <header class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-between py-0 mb-0 border-bottom">
                 <a href="/" class="d-flex align-items-center col-md-3 mt-3 mb-md-3 text-dark text-decoration-none">
                   <img src="/static/media/logo/5.svg" >
@@ -61,7 +61,7 @@
                                     <h2 class="h3 mb-1 fw-bolder">{{ user.user }}</h2>
                                     <p class="p mb-1"> Year {{user.year}}</p>
                                     <h3 class="h6 mb-3 fw-bolder">{{user.faculty}}</h3>
-                                    <p class="mb-0">Collaborate with creative and development teams on the execution of ideas.</p>
+                                    <p class="mb-0">Bio</p>
                                 </div>
                                 <div class="col-3 text-center ">
                                         <p class="fw-bolder"><span class="h5 fw-bolder">RM{{user.rate}} /</span>h</p>
@@ -169,7 +169,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
     </main>
 
     {% include 'includes/footer.html' %}
@@ -177,4 +177,7 @@
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+
+
+{% endblock javascripts %}

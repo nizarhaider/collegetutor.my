@@ -1,64 +1,91 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-        <style>
-            body{
-                background-color: #f5f6f7;
-            }
-            .tutor-profile{
-                background: #fff;
-                border: 1px solid #e0e0e0;
-                border-radius: 5px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 5px;
-            }
-            .tutor-pic{
-                margin: 20px auto;
-            }
-            .pricing{
-                width: 100%;
-            }
-            .price{
-                padding: 10px;
-                display: flex;
-                justify-content: space-between;
-                border-top: 2px solid #F7F7F5;
-            }
-            .teaches{
-                margin-top: 15px;
-                width: 100%;
-            }
-            .subjects{
-                padding: 10px;
-                display: flex;
-                justify-content: center;
-                border-top: 2px solid #F7F7F5;
-            }
-            .book-btn{
-                margin: 25px auto;
-                width: 50%;
-                border-radius: 20px;
-                height: 45px;
-            }
-            .tutor-main{
-                padding-top: 20px;
-                background: #fff;
-                border: 1px solid #e0e0e0;
-                border-radius: 5px;
-                display: flex;
-                flex-direction: column;
-                margin: 5px;
-            }
-            .tutor-name{
-                font-size: 17pt;
-                font-weight: bold;
-                color: #2a3e55;
-            }
-        </style>
-    </head>
-    <body>
+{% extends "layouts/base.html" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: #f5f6f7;
+        }
+        .tutor-profile{
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+        }
+        .tutor-pic{
+            margin: 20px auto;
+        }
+        .pricing{
+            width: 100%;
+        }
+        .price{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 2px solid #F7F7F5;
+        }
+        .teaches{
+            margin-top: 15px;
+            width: 100%;
+        }
+        .subjects{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            border-top: 2px solid #F7F7F5;
+        }
+        .book-btn{
+            margin: 25px auto;
+            width: 50%;
+            border-radius: 20px;
+            height: 45px;
+        }
+        .tutor-main{
+            padding-top: 20px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+        }
+        .tutor-name{
+            font-size: 17pt;
+            font-weight: bold;
+            color: #2a3e55;
+        }
+    </style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        {% include 'includes/preloader.html' %}
+        <div class="container-fluid">
+            <header class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-between py-0 mb-0 border-bottom">
+                <a href="/" class="d-flex align-items-center col-md-3 mt-3 mb-md-3 text-dark text-decoration-none">
+                  <img src="/static/media/logo/5.svg" >
+                  <!--                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>-->
+                </a>
+
+
+              <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+              </ul>
+
+              <div class="col-md-3 text-end">
+                <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button>
+              </div>
+            </header>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-4 tutor-profile">
@@ -101,9 +128,89 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac accumsan nulla, et lobortis ex. Ut laoreet ligula a est dapibus, in lobortis lectus sollicitudin. Fusce sit amet erat id nisl faucibus vestibulum eget id sem. Phasellus facilisis blandit purus eu semper. Nam ut consectetur turpis, egestas congue nisl. Suspendisse dignissim diam in elit accumsan, sed lobortis ligula suscipit. Cras at fermentum sem. Donec euismod nisl at magna viverra, sed consectetur tortor suscipit.
                         </p>
+
+                        <!-- Modal Section -->
+                        <div class="section section-md">
+                            <div class="container">
+                                <div class="row mt-4">
+                                    <div class="col-md-2">
+                                        <!-- Button Modal -->
+                                        <div class="d-grid">
+                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#modal-default">Edit Profile</button>
+                                        </div>
+                                        <!-- Modal Content -->
+                                        <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="form-content">
+                                                        <form method="post" enctype="multipart/form-data">
+                                                            <div class="modal-header">
+                                                                <h2 class="h6 modal-title">Edit Profile</h2>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+
+                                                                {% if user_form.errors %}
+                                                                    <div class="alert alert-danger alert-dismissible" role="alert">
+                                                                        <div id="form_errors">
+                                                                            {% for key, value in user_form.errors.items %}
+                                                                                <strong>{{ value }}</strong>
+                                                                            {% endfor %}
+                                                                        </div>
+                                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                {% endif %}
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row my-3 p-3">
+                                                                    <img class="rounded-circle account-img" src="static{{user.image.url}}" style="cursor: pointer;"/>
+                                                                </div>
+                                                                {% csrf_token %}
+                                                                <div class="form-row">
+                                                                    <div class="col-md-5">
+                                                                        <div class="form-group">
+                                                                            <label class="small mb-1">Username:</label>
+                                                                                {{ user_form.username }}
+                                                                            <label class="small mb-1">Email:</label>
+                                                                                {{ user_form.email }}
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <a href="{% url 'password_change' %}">Change Password</a>
+                                                                            <hr>
+                                                                            <label class="small mb-1">Change Avatar:</label>
+                                                                            {{ profile_form.avatar }}
+                                                                        </div>
+                                                                        <label class="small mb-1">Bio:</label> {{ profile_form.bio }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary">Save Changes</button>
+                                                            <button type="button" class="btn btn-link ms-auto"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <!-- End of Modal Content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </main>
+{% endblock content %}
+
+
+{% block javascripts %}
+
+{% endblock javascripts %}
+

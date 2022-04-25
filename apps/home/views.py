@@ -3,14 +3,26 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 from django.db.models import Q, Count
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from django import template
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import Profile, Course, Faculty
+from django import forms
+from django.contrib.auth.models import User
+from django.urls import reverse_lazy
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.messages.views import SuccessMessageMixin
 
+from .form import UpdateUserForm, UpdateProfileForm
+
+class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
+    template_name = 'home\change_password.html'
+    success_message = "Successfully Changed Your Password"
+    success_url = reverse_lazy('tutor')
 
 def is_valid_queryparam(param):
     return param != '' and param is not None
@@ -54,6 +66,27 @@ def index(request):
 
     html_template = loader.get_template('home/homepage.html')
     return HttpResponse(html_template.render(context, request))
+
+
+@login_required()
+def profile(request):
+    context = {'user': Profile.objects.all}
+
+    if request.method == 'POST':
+        user_form = UpdateUserForm(request.POST, instance=request.user)
+        profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, 'Your profile is updated successfully')
+            return redirect(to='users-profile')
+    else:
+        user_form = UpdateUserForm(instance=request.user)
+        profile_form = UpdateProfileForm(instance=request.user.profile)
+
+    # html_template = loader.get_template('home/tutor.html')
+    return render(request, 'home/tutor.html', {'user_form': user_form, 'profile_form': profile_form})
 
 
 

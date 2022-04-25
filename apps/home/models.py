@@ -4,13 +4,12 @@ Copyright (c) 2019 - present AppSeed.us
 """
 from django.db import models
 from django.contrib.auth.models import User
+from django.dispatch import receiver #add this
+from django.db.models.signals import post_save #add this
+# from tinymce.models import HTMLField
+from django.contrib.auth.models import User
+from PIL import Image
 
-
-# class Course(models.Model):
-#     course = models.CharField(max_length=20, blank=True)
-#
-#     def __str__(self):
-#         return self.course
 
 class Course(models.Model):
     name = models.CharField(max_length=30)
@@ -39,6 +38,7 @@ class Profile(models.Model):
     # rating = models.IntegerField
     year = models.CharField(max_length=1, choices=YEAR, blank=True)
     rate = models.IntegerField(default=0)
+
 
     def __str__(self):
         return f'{self.user.username} Profile' #show how we want it to be displayed
